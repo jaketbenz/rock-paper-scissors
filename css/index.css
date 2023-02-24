@@ -1,0 +1,17 @@
+html,
+body {
+	background-color: #81d8d0 !important;
+}
+.score,
+.move,
+.results,
+.status,
+.choices,
+.reset {
+	background-color: #e5e7eb ;
+}
+.rock--button,
+.paper--button,
+.scissor--button{
+    width: 6rem;
+}
