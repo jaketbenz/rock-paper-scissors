@@ -2,16 +2,21 @@ html,
 body {
 	background-color: #81d8d0 !important;
 }
+.container {
+	min-height: 100vh;
+}
 .score,
 .move,
 .results,
 .status,
 .choices,
 .reset {
-	background-color: #e5e7eb ;
+	background-color: #fefefe;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .rock--button,
 .paper--button,
-.scissor--button{
-    width: 6rem;
+.scissor--button {
+	width: 6rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

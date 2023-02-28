@@ -24,12 +24,12 @@
 </head>
 
 <body>
-    <div class="container col-sm-10 col-md-6">
+    <div class="container d-flex flex-column col-sm-10 col-md-8 col-lg-6 justify-content-center align-content-center">
         <div class="header">
 
         </div>
         <div
-            class="score d-flex justify-content-center my-4 py-3 rounded-3 text-center">
+            class="score d-flex justify-content-center my-2 py-3 rounded-3 text-center">
             <div class="human--score mx-5">
                 <h2 class="human--score--header">
                     Human Score:
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div
-            class="move d-flex justify-content-center my-4 py-3 rounded-3 text-center">
+            class="move d-flex justify-content-center my-2 py-3 rounded-3 text-center">
             <div class="human--move mx-5">
                 <h2 class="human--move--header">
                     Human Move:
@@ -66,7 +66,7 @@
                 </p>
             </div>
         </div>
-        <div class="results my-4 py-3 rounded-3 text-center">
+        <div class="results my-2 py-3 rounded-3 text-center">
             <h2 class="results--header">
                 Results:
             </h2>
@@ -74,14 +74,14 @@
                 No Move
             </p>
         </div>
-        <div class="status my-4 py-3 rounded-3 text-center">
+        <div class="status my-2 py-3 rounded-3 text-center">
             <h2 class="status--header">
                 Match Status:
             </h2>
             <p class="status--text"> The match is not over yet.</p>
         </div>
         <div
-            class="choices d-flex justify-content-evenly my-4 py-3 rounded-3 text-center">
+            class="choices d-flex justify-content-evenly my-2 py-3 rounded-3 text-center">
             <button class="rock--button btn btn-secondary"
                 id="rock">Rock</button>
             <button class="paper--button btn btn-secondary"
@@ -89,7 +89,7 @@
             <button class="scissor--button btn btn-secondary"
                 id="scissors">Scissors</button>
         </div>
-        <div class="reset my-4 py-3 rounded-3 text-center">
+        <div class="reset my-2 py-3 rounded-3 text-center">
             <div class="reset--button btn btn-secondary" onclick="resetGame()">
                 Reset Game</div>
         </div>
