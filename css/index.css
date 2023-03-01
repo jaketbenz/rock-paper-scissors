@@ -1,3 +1,6 @@
+:root {
+	--primary-light: #fefefe;
+}
 html,
 body {
 	background-color: #81d8d0 !important;
@@ -19,4 +22,14 @@ body {
 .scissor--button {
 	width: 6rem;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	color: var(--primary-light);
+	text-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+}
+.footer--link {
+	color: var(--primary-light);
 }
