@@ -12,14 +12,14 @@ body {
 .move,
 .results,
 .status,
-.choices,
+.choice,
 .reset {
 	background-color: #fefefe;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.rock--button,
-.paper--button,
-.scissor--button {
+.choice__rock,
+.choice__paper,
+.choice__scissors {
 	width: 6rem;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -30,6 +30,6 @@ body {
 	color: var(--primary-light);
 	text-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
 }
-.footer--link {
+.footer__link {
 	color: var(--primary-light);
 }

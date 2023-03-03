@@ -1,16 +1,14 @@
 const container = document.querySelector(".container");
 
-const rock = document.getElementById("rock");
-const paper = document.getElementById("paper");
-const scissor = document.getElementById("scissors");
-
-const resultsText = document.querySelector(".results--text");
-const humanScoreText = document.querySelector(".human--score--text");
-const computerScoreText = document.querySelector(".computer--score--text");
-const statusText = document.querySelector(".status--text");
-
-const humanMoveText = document.querySelector(".human--move--text");
-const computerMoveText = document.querySelector(".computer--move--text");
+const rock = document.querySelector(".choice__rock");
+const paper = document.querySelector(".choice__paper");
+const scissors = document.querySelector(".choice__scissors");
+const resultsText = document.querySelector(".results__text");
+const humanScoreText = document.querySelector(".human__scoreText");
+const computerScoreText = document.querySelector(".computer__scoreText");
+const statusText = document.querySelector(".status__text");
+const humanMoveText = document.querySelector(".human__moveText");
+const computerMoveText = document.querySelector(".computer__moveText");
 
 const button = document.querySelectorAll("button");
 button.forEach((button) => {
@@ -27,69 +25,70 @@ button.forEach((button) => {
 	});
 });
 
-let playerSelection = function () {
+const playerSelection = () => {
 	let output = input.toLowerCase();
 	console.log(output);
 	return output;
 };
-let computerSelection = function () {
-	let options = ["rock", "paper", "scissors"];
+const computerSelection = () => {
+	let options = ["Rock", "Paper", "Scissors"];
 	let random = Math.floor(Math.random() * options.length);
 	console.log(options[random]);
 	return options[random];
 };
+
 let humanScore = parseInt(0);
 let computerScore = parseInt(0);
 
-function winner() {
+const winner = () => {
 	if (humanScore === 5) {
 		rock.setAttribute("disabled", 1);
 		paper.setAttribute("disabled", 1);
-		scissor.setAttribute("disabled", 1);
+		scissors.setAttribute("disabled", 1);
 		return (statusText.innerHTML = `<span>You won the match.</span>`);
 	} else if (computerScore === 5) {
 		rock.setAttribute("disabled", 1);
 		paper.setAttribute("disabled", 1);
-		scissor.setAttribute("disabled", 1);
+		scissors.setAttribute("disabled", 1);
 		return (statusText.innerHTML = `<span>You lost the match.</span>`);
 	} else {
 		return (statusText.innerHTML = `<span>The match is not over yet </span>`);
 	}
-}
+};
 
-function playRound(playerSelection, computerSelection) {
+const playRound = (playerSelection, computerSelection) => {
 	if (playerSelection === computerSelection) {
 		return "You tied.";
 	}
-	if (playerSelection === "rock") {
-		if (computerSelection === "scissors") {
+	if (playerSelection === "Rock") {
+		if (computerSelection === "Scissors") {
 			humanScore++;
 			return "You win!";
-		} else if (computerSelection === "paper") {
+		} else if (computerSelection === "Paper") {
 			computerScore++;
 			return "You lost.";
 		}
 	}
-	if (playerSelection === "scissors") {
-		if (computerSelection === "paper") {
+	if (playerSelection === "Scissors") {
+		if (computerSelection === "Paper") {
 			humanScore++;
 			return "You win!";
-		} else if (computerSelection === "rock") {
+		} else if (computerSelection === "Rock") {
 			computerScore++;
 			return "You lost.";
 		}
 	}
-	if (playerSelection === "paper") {
-		if (computerSelection === "rock") {
+	if (playerSelection === "Paper") {
+		if (computerSelection === "Rock") {
 			humanScore++;
 			return "You win!";
-		} else if (computerSelection === "scissors") {
+		} else if (computerSelection === "Scissors") {
 			computerScore++;
 			return "You lost.";
 		}
 	}
-}
-function resetGame() {
+};
+const resetGame = () => {
 	humanScore = 0;
 	computerScore = 0;
 
@@ -102,5 +101,5 @@ function resetGame() {
 
 	rock.removeAttribute("disabled");
 	paper.removeAttribute("disabled");
-	scissor.removeAttribute("disabled");
-}
+	scissors.removeAttribute("disabled");
+};
